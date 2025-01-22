@@ -3,6 +3,15 @@ import { Inter } from "next/font/google";
 import "./globals.css";
 import Footer from "@/components/Footer";
 import Header from "@/components/Header";
+import { CartProvider } from "@/context/CartContext";
+import {
+  ClerkProvider,
+  SignInButton,
+  SignedIn,
+  SignedOut,
+  UserButton
+} from '@clerk/nextjs'
+import './globals.css'
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -17,12 +26,22 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body className={inter.className}>
-        <Header/>
-        {children}
-        <Footer/>
+    <CartProvider>
+    <ClerkProvider>
+      <html lang="en">
+        <body>
+        <SignedOut>
+            <SignInButton />
+          </SignedOut>
+          <SignedIn>
+            <UserButton />
+          </SignedIn>
+         <Header/>
+          {children}
+          <Footer/>
         </body>
-    </html>
+      </html>
+    </ClerkProvider>
+    </CartProvider>
   );
 }

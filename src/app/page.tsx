@@ -1,17 +1,20 @@
 
 import HeroSection from "@/components/HeroSection";
 import FeatureBox from "@/components/FeatureBox";
-import ListingCollection from "@/components/ListingCollection";
 import FeatureBox2 from "@/components/FeatureBox2";
 import SignupSection from "@/components/SignupSection";
+import ProductPage from "./ProductPage/page";
+import Products from "./ProductPage/page";
+import ProductOnHero from "@/components/ProductOnHero";
 export default function Home() {
   return ( 
     <main>
       
       <HeroSection/>
       <FeatureBox/>
-      <ListingCollection/>
+      <ProductOnHero/>
       <FeatureBox2/>
+      <ProductOnHero/>
       <SignupSection/>
 
     

@@ -39,7 +39,7 @@ export default function HeroSection() {
 
                 {/* Button */}
                 <div>
-                <Link href="/productListing">
+                <Link href="/ProductPage">
                     <button className="mt-6 lg:mt-10 w-full lg:w-[200px] h-[48px] lg:h-[56px] bg-[#F9F9F9] text-[16px] text-[#22202E] py-2 lg:py-4 px-6 lg:px-8 rounded hover:bg-gray-200 transition">
                         View collection
                     </button> </Link>
