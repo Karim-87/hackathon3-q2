@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
+import { BiFullscreen } from "react-icons/bi";
 
 export default function HeroSection() {
     return (
@@ -18,9 +19,14 @@ export default function HeroSection() {
             <div className="relative w-full lg:w-[630px] lg:h-[444px] bg-white mx-auto lg:mr-32 p-10 lg:p-20 space-y-6 shadow-lg">
                 {/* Display Image for Mobile */}
                 <div className="block lg:hidden mb-6">
-                    <img
-                        src="/Hero Blocks1.png"
+                    <Image
+                        src="/Hero Blocks1.jpg"
                         alt="Hero Mobile Background"
+                        width="600"
+                        height="400"
+                        objectFit="cover"
+                        priority
+                    
                         className="w-full h-auto"
                     />
                 </div>

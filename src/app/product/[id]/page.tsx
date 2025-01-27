@@ -1,5 +1,4 @@
 
-
 "use client";
 
 import { useState, useEffect } from "react";
@@ -55,7 +54,7 @@ const ProductDetail = () => {
   }
 
   const handleAddToCart = () => {
-    addToCart({ id: product._id, name: product.name, price: product.price });
+    addToCart({ id: product._id, name: product.name, price: product.price});
     alert(`${product.name} has been added to the cart!`);
   };
 

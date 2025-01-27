@@ -4,13 +4,7 @@ import "./globals.css";
 import Footer from "@/components/Footer";
 import Header from "@/components/Header";
 import { CartProvider } from "@/context/CartContext";
-import {
-  ClerkProvider,
-  SignInButton,
-  SignedIn,
-  SignedOut,
-  UserButton
-} from '@clerk/nextjs'
+import { ClerkProvider, SignInButton, SignedIn, SignedOut, UserButton } from '@clerk/nextjs'
 import './globals.css'
 
 const inter = Inter({ subsets: ["latin"] });
@@ -27,15 +21,15 @@ export default function RootLayout({
 }>) {
   return (
     <CartProvider>
-    <ClerkProvider>
+      <ClerkProvider>
       <html lang="en">
         <body>
-        <SignedOut>
-            <SignInButton />
-          </SignedOut>
-          <SignedIn>
-            <UserButton />
-          </SignedIn>
+        {/* <SignedOut> */}
+            {/* <SignInButton /> */}
+          {/* </SignedOut> */}
+          {/* <SignedIn> */}
+            {/* <UserButton /> */}
+          {/* </SignedIn> */}
          <Header/>
           {children}
           <Footer/>
