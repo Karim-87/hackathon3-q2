@@ -5,7 +5,7 @@ import { useState, useEffect } from "react";
 import { useParams } from "next/navigation";
 import { client } from "@/sanity/lib/client";
 import { useCart } from "@/context/CartContext";
-import { Category } from "@/sanity/schemaTypes/category";
+import Image from "next/image";
 
 const getProducts = async () => {
   try {
@@ -63,11 +63,17 @@ const ProductDetail = () => {
       <div className="container mx-auto py-8">
         <h1 className="text-3xl font-bold mb-6">{product.name}</h1>
         <div className="flex flex-col lg:flex-row gap-8">
-          <img
-            src={product.image_url}
-            alt={product.name}
-            className="w-full lg:w-1/2 rounded-lg"
-          />
+      
+       
+        <div className="relative w-full h-screen lg:w-1/2 ">
+  <Image
+    src={product.image_url}
+    alt={product.name}
+    fill // Makes the image fill its container
+    className="rounded-lg object-cover"
+  />
+</div>
+
           <div className="lg:w-1/2">
             <p className="text-xl font-semibold">Price: ${product.price}</p>
             <p className="text-gray-600 mt-4">{product.description}</p>

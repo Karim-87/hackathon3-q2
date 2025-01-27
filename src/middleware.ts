@@ -30,28 +30,3 @@ export const config = {
 
   ],
 }
-
-// import { clerkMiddleware } from "@clerk/nextjs/server";
-// import { NextResponse } from "next/server";
-
-// export default clerkMiddleware((req: any) => {
-//   const url = req.nextUrl.pathname;
-
-//   // path
-//   if (url.startsWith("/studio")) {
-//     return NextResponse.next();
-//   }
-
-//   return NextResponse.next();
-// });
-
-// export const config = {
-//   matcher: [
-//     "/((?!_next|favicon.ico|studio).*)", // Exclude `_next`, `favicon.ico`, and `studio` paths
-//     "/api/(.*)",
-//     ' /studio',
-//     '/studio/:path*'                        // Always include API routes
-//   ],
-// };
-
-

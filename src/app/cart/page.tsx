@@ -14,11 +14,11 @@ const CartPage = () => {
   };
 
   if (cart.length === 0) {
-    return <p className="text-center text-lg font-semibold">
+    return <div className="text-center text-lg font-semibold">
       Your cart is empty! 
       <div><Link href="/ProductPage">
       <button className='text-center bg-blue-500 text-white p-2 m-4 rounded-md hover:bg-blue-600'>
-        View Products</button></Link></div></p>;
+        View Products</button></Link></div></div>;
     
   }
 

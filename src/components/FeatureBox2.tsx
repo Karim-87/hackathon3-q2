@@ -1,5 +1,5 @@
 import Link from "next/link";
-
+import Image from "next/image";
 export default function FeatureBox2() {
     return (
         <div className="flex justify-center items-center">
@@ -15,19 +15,21 @@ export default function FeatureBox2() {
                         A global brand with local beginnings, our story began in a small studio in South London in early 2014.
                     </div>
                     <div className="mt-6 lg:mt-12">
-                       <Link href="/ProdutPage"> <button className="w-full lg:w-[200px] h-[48px] lg:h-[56px] bg-[#F9F9F926] text-[16px] py-2 lg:py-4 px-6 lg:px-8 rounded hover:bg-gray-200 transition">
+                        <Link href="/ProdutPage"> <button className="w-full lg:w-[200px] h-[48px] lg:h-[56px] bg-[#F9F9F926] text-[16px] py-2 lg:py-4 px-6 lg:px-8 rounded hover:bg-gray-200 transition">
                             View collection
                         </button></Link>
                     </div>
                 </div>
-                {/* Right Section */}
-                <div className="w-full lg:w-[630px]">
-                    <img 
-                        src="Image Block 2.png" 
-                        alt="image block 2" 
-                        className="w-full h-full object-cover" 
+                {/* right section */}
+                <div className="relative w-full lg:w-[630px] h-full"> {/* Ensure parent has a height */}
+                    <Image
+                        src="/Image Block 2.png"
+                        alt="image block 2"
+                        fill
+                        className="object-cover"
                     />
                 </div>
+               
             </div>
         </div>
     );
