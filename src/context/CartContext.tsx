@@ -7,7 +7,7 @@ import { client } from '../../hackathon-template02/sanity-migration/sanityClient
 // Define types for the cart items
 
 type CartItem = {
-  id: number;
+  id: string;
   name: string;
   price: number;
   quantity: number;
@@ -17,8 +17,8 @@ type CartItem = {
 type CartContextType = {
   cart: CartItem[];
   addToCart: (item: Omit<CartItem, 'quantity'>) => void;
-  removeFromCart: (id: number) => void;
-  updateQuantity: (id: number, change: number) => void; // Add updateQuantity function
+  removeFromCart: (id: string) => void;
+  updateQuantity: (id: string, change: number) => void; // Add updateQuantity function
   clearCart: () => void;
 };
 
@@ -42,11 +42,11 @@ export const CartProvider = ({ children }: { children: React.ReactNode }) => {
   };
 
 
-  const removeFromCart = (id: number) => {
+  const removeFromCart = (id: string) => {
     setCart((prevCart) => prevCart.filter((cartItem) => cartItem.id !== id));
   };
 
-  const updateQuantity = (id: number, change: number) => {
+  const updateQuantity = (id: string, change: number) => {
     setCart((prevCart) => {
       return prevCart.map((cartItem) =>
         cartItem.id === id
