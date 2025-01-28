@@ -1,3 +1,6 @@
+
+
+
 'use client';
 
 import { useState } from 'react';
@@ -62,13 +65,18 @@ const CheckoutPage = () => {
     
     <div className="container mx-auto py-8">
       
+           
+           
             {/* Simple unstyled Sign out button */}
             {/* <SignedIn>
                 <SignOutButton />
             </SignedIn> */}
 
             {/* Signout Button with styling */}
-            <SignedOut>
+            
+            
+            
+            {/* <SignedOut>
                 <div className="flex items-center justify-center h-screen bg-gray-100">
                     <SignInButton>
                         <button
@@ -90,7 +98,10 @@ const CheckoutPage = () => {
                         }}
                     />
                 </div>
-            </SignedIn>
+            </SignedIn> */}
+      
+      
+      
       <h1 className="text-3xl font-bold mb-6">Checkout</h1>
 
       {/* Customer Information Form */}

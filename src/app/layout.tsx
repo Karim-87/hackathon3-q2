@@ -21,7 +21,7 @@ export default function RootLayout({
 }>) {
   return (
     <CartProvider>
-      <ClerkProvider>
+      {/* <ClerkProvider> */}
       <html lang="en">
         <body>
         {/* <SignedOut> */}
@@ -35,7 +35,7 @@ export default function RootLayout({
           <Footer/>
         </body>
       </html>
-    </ClerkProvider>
+    {/* </ClerkProvider> */}
     </CartProvider>
   );
 }
