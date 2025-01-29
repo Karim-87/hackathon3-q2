@@ -9,7 +9,7 @@ const CartPage = () => {
   // Calculate total price
   const totalPrice = cart.reduce((total, item) => total + item.price * item.quantity, 0);
 
-  const handleQuantityChange = (id: number, change: number) => {
+  const handleQuantityChange = (id: string, change: number) => {
     updateQuantity(id, change); // Adjust quantity based on the change
   };
 
