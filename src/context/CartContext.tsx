@@ -3,7 +3,7 @@
 'use client';
 
 import React, { createContext, useContext, useState } from 'react';
-import { client } from '../../hackathon-template02/sanity-migration/sanityClient';
+// import { client } from '../../hackathon-template02/sanity-migration/sanityClient';
 // Define types for the cart items
 
 type CartItem = {
