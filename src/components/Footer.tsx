@@ -72,7 +72,7 @@ export default function Footer() {
 
       {/* social links lagany hai */}
       <div className="flex flex-col lg:flex-row justify-between items-center px-10 lg:px-[48px] py-5 text-white text-sm">
-        <div>Copyright 2022 Avion LTD</div>
+        <div>Copyright 2025 Ala Haven LTD</div>
         <div className="flex lg:flex-row gap-5"><div></div>
         <div><FaLinkedin /></div>
         <div><ImFacebook2 />
