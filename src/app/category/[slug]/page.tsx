@@ -1,22 +1,25 @@
+import Link from "next/link";
 import Image from "next/image";
 import { client as sanityClient } from "../../../sanity/lib/client";
 
 interface Product {
-  id: string;
+  _id: string;
   name: string;
   image: string;
   price: number;
   slug: string;
 }
 
+
 interface CategoryPageProps {
   params: { slug: string };
 }
 
+
 // Generate static paths
 export async function generateStaticParams() {
   
-  const query = `*[_type == "category"]{slug}`;
+  const query = `*[_type == "category"][slug]`;
   const categories = await sanityClient.fetch(query);
 
   return categories.map((category: { slug: { current: string } }) => ({
@@ -67,14 +70,23 @@ const CategoryPage = async ({ params }: CategoryPageProps) => {
       <h1 className="text-2xl font-bold mb-4">Category: {category.name}</h1>
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
         {products.map((product: Product) => (
-          <div key={product.id} className="border rounded p-4">
+          <div key={product._id} className="border rounded p-4">
             <Image              
               src={product.image}
               alt={product.name}
-              className="w-full h-48 object-cover mb-2"
+              width={500}
+              height={500}
+              className="w-full h-52 object-cover mb-2"
             />
             <h2 className="text-lg font-bold">{product.name}</h2>
             <p className="text-sm text-gray-500">${product.price}</p>
+            <Link href={`/product/${product._id}`}>
+              <h1 className="block mt-4 text-center bg-blue-500 text-white py-2 rounded-md hover:bg-blue-600">
+                View Details
+              </h1>
+            </Link>
+           
+                     
           </div>
         ))}
       </div>

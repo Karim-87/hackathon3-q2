@@ -40,7 +40,7 @@ export default function HeroSection() {
 
                 {/* Subheading */}
                 <div className="text-[16px] lg:text-[18px] text-[#5B5676] font-sans">
-                    Shop the new Spring 2022 collection today
+                    Shop the new Spring 2025 collection today
                 </div>
 
                 {/* Button */}

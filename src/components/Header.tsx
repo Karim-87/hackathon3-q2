@@ -46,13 +46,13 @@ const Header = () => {
       {/* Bottom Navbar */}
       <nav className="py-3 lg:py-3">
         <ul className="flex flex-wrap justify-center gap-4 lg:gap-[44px] text-sm lg:text-base text-[#22202e] font-medium">
-        <Link href="/category/PlantPots"><li className="cursor-pointer hover:text-gray-500">Plant Pots</li></Link>
-          <Link href="/category/Ceramics"><li className="cursor-pointer hover:text-gray-500">Ceramics</li></Link>
-          <Link href="/category/Tables"><li className="cursor-pointer hover:text-gray-500">Tables</li></Link>
-          <Link href="/category/Chairs"><li className="cursor-pointer hover:text-gray-500">Chairs</li></Link>
-          <Link href="/category/Crockery"><li className="cursor-pointer hover:text-gray-500">Crockery</li></Link>
-          <Link href="/category/Tableware"><li className="cursor-pointer hover:text-gray-500">Tableware</li></Link>
-          <Link href="/category/Cutlery"><li className="cursor-pointer hover:text-gray-500">Cutlery</li> </Link>
+        <Link href="/category/plant-pots"><li className="cursor-pointer hover:text-gray-500">Plant Pots</li></Link>
+          <Link href="/category/ceramics"><li className="cursor-pointer hover:text-gray-500">Ceramics</li></Link>
+          <Link href="/category/tables"><li className="cursor-pointer hover:text-gray-500">Tables</li></Link>
+          <Link href="/category/chairs"><li className="cursor-pointer hover:text-gray-500">Chairs</li></Link>
+          <Link href="/category/crockery"><li className="cursor-pointer hover:text-gray-500">Crockery</li></Link>
+          <Link href="/category/tableware"><li className="cursor-pointer hover:text-gray-500">Tableware</li></Link>
+          <Link href="/category/cutlery"><li className="cursor-pointer hover:text-gray-500">Cutlery</li> </Link>
         </ul>
       </nav>
     </div>
